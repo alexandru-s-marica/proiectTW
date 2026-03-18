@@ -1,0 +1,76 @@
+ 
+body{
+    --culoare-background: darksalmon;
+    --margine-pagina: 100px;
+    --culoare-contur: purple;
+    background-color: var(--culoare-background)
+}
+ 
+ 
+p{
+    border: 1px solid var(--culoare-background)
+}
+ 
+main{
+    margin-left: var(--margine-pagina);
+    margin-right: var(--margine-pagina);
+}
+#grid-pagina > *{
+    display: grid;
+}
+#grid-pagina > *{
+   border: 1px solid
+}
+ 
+ 
+#welcome{
+    grid-area: welcome;
+}
+#promotii{
+    grid-area: promotii;
+}
+#anunturi{
+    grid-area: anunturi;
+}
+#orar{
+    grid-area: orar;
+}
+ 
+#fig1{
+    grid-area: fig1;
+}
+#fig2{
+    grid-area: fig2;
+}
+#fig3{
+    grid-area: fig3;
+}
+#produse{
+    grid-area: produse;
+}
+#index-intrebari{
+    grid-area: index-intrebari;
+}
+
+/* media query -> css pentru max-width de 1200px */
+@media screen and (max-width:1200px){
+    body{
+        --margine-pagina: 80px;
+    }
+    #grid-pagina{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "welcome welcome welcome"
+                        "promotii promotii anunturi"
+                        "fig1 orar orar"
+                        "fig2 orar orar";
+    }
+}
+
+@media screen and (max-width:700x){
+    body{
+        --margine-pagina: 50px;
+    }
+    #grid-pagina{
+        display: block;
+    }
+}

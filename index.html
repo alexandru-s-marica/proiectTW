@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alexandru-Stefan Marica">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Magazinul LEGO [*] ofera o gama larga de seturi din toate temele, precum si piese la bucata si kilogram">
+    <meta name="keywords" content="LEGO, magazin LEGO, piese LEGO, LEGO, seturi LEGO, seturi, piese">
+    <title>Magazin LEGO</title>
+    <link rel="icon" type="image/png" href="./resurse/imagini/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./resurse/imagini/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./resurse/imagini/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./resurse/imagini/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="./resurse/imagini/favicon/site.webmanifest" />
+</head>
+
+<body id="top">
+    <header>
+        <h1>Proiect TW - Magazin de LEGO</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a>
+                    <ul>
+                        <li><a href="#welcome">Bine ați venit</a></li>
+                        <li><a href="#promotii">Promoții</a></li>
+                        <li><a href="#produse">Gama de piese</a></li>
+                    </ul>
+                </li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="inregistrare.html">Înregistrare</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> <!--  comentariu -->
+        <div id="grid-pagina">
+
+            <section id="welcome">
+                <hgroup>
+                    <h2>Bine ati venit</h2>
+                    <p class="subtitlu">Prezentarea magazinului</p>
+                </hgroup>
+
+                <p class="intro">Vă mulțumim că vizitați acest <b>magazin LEGO</b>. Aici găsiți cele mai noi <b>seturi LEGO</b>. Spor la construit!</p>
+                
+                <div class="intro-oferte"><div>Star Wars</div><div>Ninjago</div><div>City</div><div>Technic</div><div>Creator</div></div>
+                <p class="anunt intro">Puteți comanda <b>piese LEGO</b> la bucată direct la domiciliu, prin intermediul ofertei noastre de livrare.</p>
+                
+                <h3>Descoperă magazinul (Hartă Interactivă)</h3>
+                <p>Dă click pe diversele forme din imagine pentru a naviga rapid:</p>
+                
+                <img src="resurse/imagini/harta-magazin.jpg" usemap="#navigare-vizuala" alt="Navigare vizuală magazin" width="500" height="250">
+                
+                <map name="navigare-vizuala">
+                    <area shape="rect" coords="10,10,160,240" href="#promotii" alt="Promoții" title="Mergi la secțiunea Promoții">
+                    
+                    <area shape="circle" coords="250,125,100" href="#produse" alt="Gama de Produse" title="Mergi la Produse">
+                    
+                    <area shape="poly" coords="360,10,490,10,450,240,390,240" href="#faq" alt="Întrebări Frecvente" title="Mergi la Întrebări frecvente">
+                </map>
+                
+                <div id="dv-prezentare-1">
+                    <div id="dv-prezentare">
+                    <figure id="fig-prezentare-lego">
+                    <picture>
+                        <source srcset="./resurse/imagini/lego-set-mic.jpg" media="(max-width: 600px)" />
+                        
+                        <source srcset="./resurse/imagini/lego-set-mediu.jpg" media="(max-width: 1024px)" />
+                        
+                        <img src="./resurse/imagini/lego-set-mare.jpg" alt="Set LEGO City" title="Set detaliat LEGO City cu secție de poliție" />
+                    </picture>
+                    <figcaption>Cel mai căutat set din luna aceasta, perfect pentru constructorii pasionați.</figcaption>
+                </figure>
+                </div>
+            </div>
+            <hr class="prajituri"/>
+            <div id="container-video">
+                <img style="width:50%" class="farfurie" src="resurse/imagini/farfurie-flori-albastre.png" alt="farfurie" title="O farfurie cu flori">
+                <div id="centrare-video">
+                    <div id="clip-video">
+                        <div id="stil-video">
+                            <video width="320" height="240"  playsinline autoplay loop muted>
+                                <source src="resurse/video/Chocolate.mp4" type="video/mp4">
+                                <source src="resurse/video/Chocolate.ogv" type="video/ogv">
+                                <track default src="data:image/png;base64,V0VCVlRUIC0gQ2lvY29sYXTEgwoKMDA6MDAuMDAwIC0tPiAwMDowMy4wMDAgbGluZTowCkNpb2NvbGF0xIMhISEKCjAwOjAzLjAwMCAtLT4gMDA6MDcuMDAwIGxpbmU6MApNdWx0xIMgY2lvY29sYXTEgyEhISEKCjAwOjA5LjAwMCAtLT4gMDA6MTQuMDAwIGxpbmU6MApVcHMsIGFtIG11cmTEg3JpdCBtYXNhIQoKMDA6MTQuNTAwIC0tPiAwMDoxOS4wMDAgbGluZTowCk51IGNvbnRlYXrEgyEgQ2lvY29sYXTEg8SDxIPEg8SDxIMhCgo=" kind="captions" srclang="ro" label="romana">
+                                <track src="data:image/png;base64,V0VCVlRUIC0gQ2hvY29sYXRlDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDMuMDAwDQpDaG9jb2xhdGUhISENCg0KMDA6MDMuMDAwIC0tPiAwMDowNy4wMDANCkxvdHMgb2YgY2hvY29sYXRlISEhIQ0KDQowMDowOS4wMDAgLS0+IDAwOjE0LjAwMA0KT3VwcywgdGFibGUgZ290IGRpcnR5IQ0KDQowMDoxNC41MDAgLS0+IDAwOjE5LjAwMA0KRG9lc24ndCBtYXR0ZXIhIENob2NvbGF0ZSEhIQ0KDQo=" kind="captions" srclang="en" label="engleza">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <section id="promotii">
+                <h2>Promoții și oferte la seturi</h2>
+                <article>
+                    <h3 class="titlu">Super ofertă de weekend</h3>
+                    <p>Acest magazin oferă reduceri de <s>10%</s> <ins>15%</ins> pentru toate seturile cumpărate fizic.</p>
+                </article>
+                <article>
+                    <h3>Ofertă pachet</h3>
+                    <p>Cofetăria Dulcelind oferă pachete cuprinzând:</p>
+                    <ol>
+                        <li><i lang="en">icecream</i></li>
+                        <li>Un set de 4 pateuri de sortimente diferite</li>
+                        <li>O prajitură la alegere</li>
+                        <li>Un <i>suc</i></li>
+                        <li>Gratis: o farfurioară ornata cu inițiala cofetăriei</li>
+                        <li>Gratis: o felicitare cu imaginea cofetăriei</li>
+                        <li>Gratis: un pui de pisică (am găsit niște pui de pisică abandonați lângă cofetărie și noi nu îi putem păstra. Nu ne reclamați la ANPC, <!--abreviere--> mulțumim de înțelegere!).  </li>
+                    </ol>
+                    
+                </article>
+                <article>
+                    <h3>Prajituri de Halloween</h3>
+                    <p>Noi punem suflet în prăjiturile noastre!... Literalmente!</p>
+                    <p>Chiar și dacă nu e Halloween încă, avem prajituri bântuite, de toate dimensiunile</p>
+                    <ol>
+                        <li>Când vreți să gustați o prajitura, aceasta țipă, sau, mai rău, vă spune sincer că ar cam trebui să vă mai spălați pe dinți.</li>
+                        <li>Când puneți mai multe prăjituri pe platou, vor conspira împotriva dumneavoastră... hehe... dar n-au ce să vă facă, în final sunt doar niște prăjituri</li>
+                        <li>Nu încercați să mușcați vreun fursec de Halloween, căci va mușca el înainte. Ați fost avertizați.</li>
+
+                    </ol>
+                    
+                </article>
+                <article>
+                    <h3>Prăjituri de Anul Nou</h3>
+                    <p>La începutul fiecărui an vă faceți planuri că de data asta veti trăi mai sănatos, veți mânca mai chibzuit și vă veți duce din prima zi la sală. Știm cu toții că e doar o amăgire. Luați mai bine o prăjitură, măcar să va delectați cu un gust bun și dulce în timp ce plângeți despre kilogramele în plus.</p>
+                    
+                </article>
+                <article>
+                    <h3>Cum calculăm reducerea?</h3>
+                    <p>Pentru transparență, iată formula matematică prin care calculăm prețul final al unui set LEGO după aplicarea reducerii de weekend:</p>
+                    
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <mrow>
+                            <msub>
+                                <mi>P</mi>
+                                <mrow><mi>f</mi><mi>i</mi><mi>n</mi><mi>a</mi><mi>l</mi></mrow>
+                            </msub>
+                            
+                            <mo>=</mo>
+                            
+                            <msub>
+                                <mi>P</mi>
+                                <mrow><mi>i</mi><mi>n</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>a</mi><mi>l</mi></mrow>
+                            </msub>
+                            
+                            <mo>&#xD7;</mo>
+                            
+                            <mrow>
+                                <mo>(</mo>
+                                <mn>1</mn>
+                                <mo>-</mo>
+                                <mfrac>
+                                    <mi>reducere</mi>
+                                    <mn>100</mn>
+                                </mfrac>
+                                <mo>)</mo>
+                            </mrow>
+                        </mrow>
+                    </math>
+                </article>
+            </section>
+            <section id="produse">
+                <h2>Produsele noastre: Piese și Seturi LEGO</h2>
+                <p>Vă oferim o multitudine de piese LEGO pentru a construi orice vă imaginați.</p>
+                
+                <section>
+                    <h3>Piese la kilogram</h3>
+                    <p>Avem piese din următoarele categorii:</p>
+                    <ul>
+                        <li>cărămizi clasice</li>
+                        <li>plăci de bază</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>Seturi de colectie</h3>
+                    <p>Cele mai tari seturi exclusive:</p>
+                    <ul>
+                        <li>Star Wars Millennium Falcon</li>
+                        <li>Ninjago City Gardens</li>
+                    </ul>
+                </section>
+            </section>
+            <section id="despre-lego">
+                <h2>Cultura LEGO</h2>
+
+                <p>Suntem mândri să găzduim întâlniri lunare pentru comunitatea <abbr title="Adult Fan of LEGO">AFOL</abbr> din oraș.</p>
+
+                <p>Cărămizile noastre au inspirat generații întregi de constructori, oferind posibilități infinite de creație prin simple piese care se îmbină perfect.</p>
+
+                <blockquote>
+                    <p>Doar ce este mai bun este suficient de bun. Acesta este motto-ul care a ghidat grupul de constructori încă de la începuturile sale.</p>
+                    <cite>- Ole Kirk Christiansen, fondatorul companiei</cite>
+                </blockquote>
+
+                <h3>Dicționarul constructorului</h3>
+                
+                <dl>
+                    <dt>AFOL</dt>
+                    <dd>Adult Fan of LEGO (Fan adult). Termen folosit pentru adulții pasionați de construit.</dd>
+                    
+                    <dt>MOC</dt>
+                    <dd>My Own Creation (Propria mea creație). Un set conceput și construit de un fan, fără a urma instrucțiuni oficiale.</dd>
+                </dl>
+            </section>
+            <section id="orar">
+                <h2>Orar magazin</h2>
+                <table id="tab-orar">
+                    <caption>Programul de funcționare și livrări al magazinului LEGO</caption>
+                    
+                    <thead>
+                        <tr>
+                            <th>Perioadă</th>
+                            <th>Ziua</th>
+                            <th>Deschidere</th>
+                            <th>Pauză tehnică</th>
+                            <th>Închidere</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td rowspan="5">Zile<br/>Lucrătoare</td>
+                            <td>Luni</td>
+                            <td>10:00</td>
+                            <td>13:00 - 13:30</td>
+                            <td>20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Marți</td>
+                            <td>10:00</td>
+                            <td>13:00 - 13:30</td>
+                            <td>20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Miercuri</td>
+                            <td>10:00</td>
+                            <td>13:00 - 13:30</td>
+                            <td>20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Joi</td>
+                            <td>10:00</td>
+                            <td>13:00 - 13:30</td>
+                            <td>20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Vineri</td>
+                            <td>10:00</td>
+                            <td>13:00 - 13:30</td>
+                            <td>21:00</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Weekend</td>
+                            <td>Sâmbătă</td>
+                            <td>09:00</td>
+                            <td>-</td>
+                            <td>18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Duminică</td>
+                            <td>10:00</td>
+                            <td>-</td>
+                            <td>14:00</td>
+                        </tr>
+                    </tbody>
+                    
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Închis în prima zi a lunii pentru inventarul pieselor și de sărbătorile legale.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p><strong>Atenție!</strong> Seturile conțin piese mici. Pericol de sufocare pentru copiii sub 3 ani!</p>            </section>
+            <figure id="fig1" class="fg-img">
+                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <figcaption>Briose 1</figcaption>
+            </figure>
+            <figure id="fig2" class="fg-img">
+            <img src="resurse/imagini/briose-frisca.png" alt="briose">
+            <figcaption>Briose 2</figcaption>
+            </figure>
+            <figure  id="fig3" class="fg-img">
+            <img src="resurse/imagini/briose-frisca.png" alt="briose">
+            <figcaption>Briose 3</figcaption>
+            </figure>
+            <figure  id="fig4">
+            <img src="resurse/imagini/briose-frisca.png" alt="briose">
+            <figcaption>Briose 3</figcaption>
+            </figure>
+            <section id="evenimente">
+                <h2>Evenimente în magazin</h2>
+                <p>Participați la activitățile noastre speciale dedicate fanilor de toate vârstele!</p>
+                
+                <ul>
+                    <li>
+                        <time datetime="2026-04-15T12:00">15 aprilie, ora 12:00</time> - 
+                        <b>Concurs de construcție rapidă</b>: Oferim premii surpriză celor care pot asambla un set de 50 de piese în cel mai scurt timp.
+                    </li>
+                    <li>
+                        <time datetime="2026-05-01T10:00">1 mai, ora 10:00</time> - 
+                        <b>Lansare serie nouă Star Wars</b>: Fii primul care cumpără noile nave. Primii 50 de clienți primesc o minifigurină exclusivă.
+                    </li>
+                    <li>
+                        <time datetime="2026-06-01T14:30">1 iunie, ora 14:30</time> - 
+                        <b>Ziua Copilului la magazinul LEGO</b>: Toți copiii vor putea testa noile seturi Technic pe o pistă special amenajată în locația noastră.
+                    </li>
+                </ul>
+            </section>
+            <section id="faq">
+                <h2>Întrebări frecvente</h2>
+                
+                <details>
+                    <summary>Vindeți piese de schimb la bucată?</summary>
+                    <p>Da! Avem un perete special "Pick-A-Brick" de unde puteți alege piese individuale la kilogram sau la bucată, în funcție de nevoile proiectului dumneavoastră.</p>
+                </details>
+                
+                <details>
+                    <summary>Care este politica de retur pentru seturi?</summary>
+                    <p>Seturile pot fi returnate în termen de 30 de zile de la achiziție, cu condiția ca ambalajul original să fie complet sigilat. Seturile deschise nu pot fi returnate din motive de inventar (riscul de piese lipsă).</p>
+                </details>
+                
+                <details>
+                    <summary>Există o limită de vârstă pentru evenimentele din magazin?</summary>
+                    <p>Majoritatea evenimentelor noastre sunt destinate copiilor între 6 și 14 ani. Totuși, organizăm lunar și seri dedicate exclusiv adulților pasionați de construit (comunitatea AFOL).</p>
+                </details>
+                
+                <details>
+                    <summary>Seturile comercializate sunt originale?</summary>
+                    <p>Suntem un magazin autorizat, așadar absolut toate produsele noastre sunt 100% originale și beneficiază de garanția producătorului.</p>
+                </details>
+            </section>
+
+        </div>
+        <section id="galerie-statica">
+            <h2>Galerie</h2>
+            <div id="grid-galerie">
+                <figure>
+                    <div>
+                        <img src="resurse/imagini/briose-frisca.png" alt="briose"></div>
+                
+                <figcaption>Briose</figcaption>
+                </figure>
+                <figure>
+                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <figcaption>Briose</figcaption>
+                </figure>
+                <figure>
+                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <figcaption>Briose</figcaption>
+                </figure>
+                <figure>
+                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <figcaption>Briose</figcaption>
+                </figure>
+                <figure>
+                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <figcaption>Briose</figcaption>
+                </figure>
+                <figure>
+                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <figcaption>Briose</figcaption>
+                </figure>
+                <figure>
+                <img src="resurse/imagini/briose-frisca.png" alt="briose">
+                <figcaption>Briose</figcaption>
+                </figure>
+            
+            </div>
+        </section>
+        <section id="video-constructii">
+                <h2>Tutoriale de construcție</h2>
+                <p>Urmăriți experții noștri asamblând cele mai complexe seturi (alegeți manual):</p>
+                
+                <div class="container-iframe">
+                    <div class="taburi-iframe">
+                        <a href="https://www.youtube.com/embed/WouqeLJ4EuM" target="ifr-video">Construcție LEGO 1</a>
+                        <a href="https://www.youtube.com/embed/ReWSULH-EQo" target="ifr-video">Construcție LEGO 2</a>
+                        <a href="https://www.youtube.com/embed/RGhL4hP9vmA" target="ifr-video">Construcție LEGO 3</a><br/>
+                    </div>
+                    
+                    <br/>
+                    
+                    <iframe width="560" height="315" 
+                            src="https://www.youtube.com/embed/WouqeLJ4EuM" 
+                            name="ifr-video" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+
+            <section id="playlist-automat">
+                <h2>Maraton de construcții (Playlist automat)</h2>
+                <p>Urmăriți o serie de videoclipuri care rulează automat, unul după altul:</p>
+                
+                <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/videoseries?list=PLCgkBxj8_VdpyNV-8m7yhqSU_3Y7y233t&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;controls=1" 
+                        title="YouTube video playlist" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                </iframe>
+            </section>
+    <section id="statistici-magazin">
+                <h2>Statistici și disponibilitate</h2>
+                
+                <p>Stoc disponibil pentru setul exclusiv Millennium Falcon: <br>
+                    <meter min="0" max="50" low="10" high="40" optimum="45" value="5">5 din 50 bucăți</meter> 
+                    (Stoc critic!)
+                </p>
+                
+                <p>Locuri ocupate la atelierul de construcție de sâmbătă: <br>
+                    <meter min="0" max="30" low="10" high="25" optimum="15" value="28">28 din 30 locuri</meter> 
+                    (Aproape plin!)
+                </p>
+            </section>
+    <section id="resurse-utile">
+                <h2>Resurse și Linkuri Utile</h2>
+                
+                <p>Pentru mai multe detalii despre istoria cărămizilor, <a href="https://www.lego.com/ro-ro" target="_blank">vizitați site-ul oficial LEGO internațional</a>.</p>
+
+                <p>Puteți citi despre istoria companiei pe Wikipedia, accesând linkul de mai jos:<br/>
+                <a href="https://ro.wikipedia.org/wiki/Grupul_Lego#Istoric">https://ro.wikipedia.org/<wbr>wiki/<wbr>Grupul_Lego<wbr>#Istoric</a></p>
+                
+                <p>Dați click pe imaginea de mai jos pentru a o vedea la rezoluție maximă:</p>
+                <a href="resurse/imagini/lego-set-mare.jpg">
+                    <img src="resurse/imagini/lego-set-mic.jpg" alt="Miniatura set LEGO" title="Click pentru varianta mărită" style="width: 200px;">
+                </a>
+
+                <p>Răsfoiți catalogul nostru direct aici sau descărcați-l:</p>
+                <object data="resurse/documente/catalog-baza.pdf" type="application/pdf" style="width: 100%; height: 500px;">
+                    <p>Browserul dumneavoastră nu suportă afișarea PDF-urilor. <a href="resurse/documente/catalog-baza.pdf" download="Catalog_Magazin_LEGO_2026.pdf">Descărcați fișierul aici</a>.</p>
+                </object>
+            </section>
+    </main>
+    <footer>
+        <p><a href="#top">Înapoi la începutul paginii</a></p>
+        
+        <address>
+            <strong>Contactați-ne:</strong><br>
+            Telefon: <a href="tel:+40712345678">0712 345 678</a><br>
+            E-mail: <a href="mailto:contact@magazinlego-tw.ro">contact@magazinlego-tw.ro</a><br>
+            Mesagerie: <a href="https://wa.me/40712345678">Scrie-ne pe WhatsApp</a><br><br>
+            
+            Adresa magazinului:<br>
+            <a href="https://maps.google.com/?q=Facultatea+de+Matematica+si+Informatica+Bucuresti" target="_blank">
+                Bulevardul Cărămizilor nr. 10,<br>
+                Clădirea B, Parter,<br>
+                București
+            </a>
+        </address>
+
+        <p>Vă așteptăm și la sediul nostru central:</p>
+        <iframe 
+            src="https://maps.google.com/maps?q=Facultatea%20de%20Matematica%20si%20Informatica%20Bucuresti&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+            style="width: 100%; height: 300px; border:0; margin-bottom: 20px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <p>
+            <small>
+                &copy; 2026 Magazin de LEGO. Toate drepturile rezervate.<br>
+                Pagina creată pe <time datetime="2026-03-10">9 martie 2026</time>.
+            </small>
+        </p>
+    </footer>
+
+</body>
+
+</html>
