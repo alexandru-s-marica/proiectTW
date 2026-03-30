@@ -1,0 +1,151 @@
+$timp: 0.5s;
+
+nav {
+    --latime-btn: 160px;
+    --inaltime-btn: 50px;
+    background-color: var(--culoare-contur);
+    position: relative;
+    z-index: 1000;
+
+    #btn-menu, #hamburger { display: none; }
+
+    ul.menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: relative;
+            width: var(--latime-btn);
+            height: var(--inaltime-btn);
+            background-color: var(--culoare-background);
+            border: 1px solid var(--culoare-contur);
+            text-align: center;
+            line-height: var(--inaltime-btn);
+            box-sizing: border-box;
+
+            a {
+                text-decoration: none;
+                color: var(--culoare-text);
+                display: block;
+                height: 100%;
+                width: 100%;
+                transition: font-size $timp ease;
+
+                &:hover {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .submeniu {
+                position: absolute;
+                top: 100%;
+                left: -1px;
+                width: calc(100% + 2px);
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                background-color: white;
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: transform $timp ease, opacity $timp ease;
+                opacity: 0;
+                visibility: hidden;
+                z-index: 100;
+                border: 1px solid var(--culoare-contur);
+
+                li {
+                    width: 100%;
+                    height: auto;
+                    line-height: 1.5;
+
+                    a {
+                        padding: 10px 0;
+                        font-size: 1rem;
+                        position: relative;
+
+                        &::before, &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            width: 5px;
+                            height: 0;
+                            background: linear-gradient(to bottom, white, black);
+                            transition: height $timp ease;
+                        }
+                        &::before { left: 0; }
+                        &::after { right: 0; }
+
+                        &:hover {
+                            font-size: 1rem;
+                            &::before, &::after {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover > .submeniu {
+                transform: scaleY(1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        --latime-btn: 70px;
+        ul.menu li a span { display: none; }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        #hamburger {
+            display: block;
+            cursor: pointer;
+            font-size: 2rem;
+            color: white;
+            padding: 10px;
+        }
+
+        ul.menu {
+            flex-direction: column;
+            width: 100%;
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height $timp ease;
+
+            li {
+                width: 100%;
+                height: auto;
+
+                &#opt-acasa span { display: none; }
+                &#opt-acasa i { display: inline-block; font-size: 1.5rem; }
+
+                .submeniu {
+                    position: static;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    width: 100%;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: transform $timp ease, max-height $timp ease;
+                }
+
+                &:hover .submeniu {
+                    transform: scaleX(1);
+                    max-height: 500px;
+                }
+            }
+        }
+
+        #btn-menu:checked ~ ul.menu {
+            max-height: 1000px; 
+        }
+    }
+}

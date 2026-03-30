@@ -1,46 +1,142 @@
-nav{
-    --latime-buton: 120px;
-    --inaltime-buton: 30px;
-    background-color: var(--culoare-contur);
+nav {
+  --latime-btn: 160px;
+  --inaltime-btn: 50px;
+  background-color: var(--culoare-contur);
+  position: relative;
+  z-index: 1000;
 }
- 
-ul.menu{
-    display: flex;
+nav #btn-menu, nav #hamburger {
+  display: none;
 }
- 
-ul.menu ul{
-    display: none;
+nav ul.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
- 
-ul.menu, ul.menu ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+nav ul.menu li {
+  position: relative;
+  width: var(--latime-btn);
+  height: var(--inaltime-btn);
+  background-color: var(--culoare-background);
+  border: 1px solid var(--culoare-contur);
+  text-align: center;
+  line-height: var(--inaltime-btn);
+  box-sizing: border-box;
 }
- 
-ul.menu li{
-    font-weight: bold;
-    padding: 10px;
-    background-color: var(--color-background);
-    border: 1px solid var(--culoare-contur);
-    width: var(--latime-buton);
-    height: var(--inaltime-buton);
-    text-align: center;
-    line-height: var(--inaltime-buton);
-    color: black;
-    transition: all 1s linear;
+nav ul.menu li a {
+  text-decoration: none;
+  color: var(--culoare-text);
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: font-size 0.5s ease;
 }
- 
-ul.meniu li:hover{
-    background-color: var(-- culoare-contur);
-    color: ☐ white;
+nav ul.menu li a:hover {
+  font-size: 1.3rem;
+}
+nav ul.menu li .submeniu {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  width: calc(100% + 2px);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  border: 1px solid var(--culoare-contur);
+}
+nav ul.menu li .submeniu li {
+  width: 100%;
+  height: auto;
+  line-height: 1.5;
+}
+nav ul.menu li .submeniu li a {
+  padding: 10px 0;
+  font-size: 1rem;
+  position: relative;
+}
+nav ul.menu li .submeniu li a::before, nav ul.menu li .submeniu li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(to bottom, white, black);
+  transition: height 0.5s ease;
+}
+nav ul.menu li .submeniu li a::before {
+  left: 0;
+}
+nav ul.menu li .submeniu li a::after {
+  right: 0;
+}
+nav ul.menu li .submeniu li a:hover {
+  font-size: 1rem;
+}
+nav ul.menu li .submeniu li a:hover::before, nav ul.menu li .submeniu li a:hover::after {
+  height: 100%;
+}
+nav ul.menu li:hover > .submeniu {
+  transform: scaleY(1);
+  opacity: 1;
+  visibility: visible;
 }
 
-ul.meniu li a{
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    width: 100%;
-    height: 100%;
+@media screen and (max-width: 1024px) {
+  nav {
+    --latime-btn: 70px;
+  }
+  nav ul.menu li a span {
+    display: none;
+  }
 }
- 
+@media screen and (max-width: 768px) {
+  nav #hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+  }
+  nav ul.menu {
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  nav ul.menu li {
+    width: 100%;
+    height: auto;
+  }
+  nav ul.menu li#opt-acasa span {
+    display: none;
+  }
+  nav ul.menu li#opt-acasa i {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+  nav ul.menu li .submeniu {
+    position: static;
+    transform: scaleX(0);
+    transform-origin: left;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: transform 0.5s ease, max-height 0.5s ease;
+  }
+  nav ul.menu li:hover .submeniu {
+    transform: scaleX(1);
+    max-height: 500px;
+  }
+  nav #btn-menu:checked ~ ul.menu {
+    max-height: 1000px;
+  }
+}/*# sourceMappingURL=nav.css.map */
