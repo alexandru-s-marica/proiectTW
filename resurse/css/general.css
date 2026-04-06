@@ -452,3 +452,57 @@ math msub mi:first-child {
         color: black !important;
     }
 }
+
+#stil-video video {
+    width: 80%;
+    min-width: 300px;
+    max-width: 900px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+video::cue {
+    background-color: white;
+    color: #111111;
+    font-weight: bold;
+}
+
+:root {
+    --culoare-vizitat: #6a0dad;
+    --c1: #add8e6;
+    --culoare-simbol-hover: #ff4500;
+}
+
+a:visited {
+    color: var(--culoare-vizitat);
+}
+
+a[href^="http"]::before {
+    content: "⮳ ";
+    font-size: 1.5em;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+a[href^="http"]:hover::before {
+    color: var(--culoare-simbol-hover);
+}
+
+main a {
+    background-image: radial-gradient(circle, var(--c1) 0%, var(--c1) 40%, transparent 80%, transparent 100%);
+    background-position: center;
+    background-size: 0% 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease;
+    border: 1px solid transparent; 
+}
+
+main a:hover {
+    background-size: 100% 100%;
+}
+
+main a:active {
+    border: 1px solid black;
+}

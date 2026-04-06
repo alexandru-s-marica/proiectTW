@@ -1,0 +1,31 @@
+{
+  "cale_baza": "/resurse/imagini/erori/",
+  "eroare_default": {
+    "titlu": "Eroare generica",
+    "text": "A aparut o eroare pe server. Va rugam sa incercati mai tarziu.",
+    "imagine": "default.png"
+  },
+  "info_erori": [
+    {
+      "identificator": 404,
+      "status": true,
+      "titlu": "Pagina nu a fost gasita",
+      "text": "Ne pare rau, dar pagina pe care incerci sa o accesezi nu exista sau a fost mutata.",
+      "imagine": "404.png"
+    },
+    {
+      "identificator": 403,
+      "status": true,
+      "titlu": "Acces interzis",
+      "text": "Nu ai permisiunile necesare pentru a accesa acest director.",
+      "imagine": "403.png"
+    },
+    {
+      "identificator": 400,
+      "status": true,
+      "titlu": "Cerere invalida",
+      "text": "Ai incercat sa accesezi direct un fisier de template.",
+      "imagine": "400.png"
+    }
+  ]
+}

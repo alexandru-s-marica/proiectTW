@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <%- include('../fragmente/head') %>
+    <title>Despre noi - Magazin LEGO</title>
+</head>
+<body id="top">
+    <%- include('../fragmente/header') %>
+    
+    <main>
+        <section style="padding: 40px; background-color: white; border-radius: 15px; margin: 40px var(--margine-pagina); border: 1px solid var(--culoare-contur);">
+            <h2 style="text-align: center; color: var(--culoare-principala);">Despre Magazinul Nostru LEGO</h2>
+            <p style="margin-top: 20px;">Suntem un magazin pasionat de universul LEGO, fondat din dorința de a aduce bucurie constructorilor de toate vârstele. Am început ca un mic grup de fani AFOL (Adult Fans of LEGO) și ne-am transformat într-un hub local pentru comunitate.</p>
+            <p style="margin-top: 10px;">Aici găsești seturi rare, piese la kilogram, dar și un loc unde să discuți despre noile tale creații MOC (My Own Creation).</p>
+            
+            <div style="margin-top: 30px; padding: 15px; background-color: var(--culoare-background); border-left: 5px solid var(--culoare-accent);">
+                <strong>Informații vizitator:</strong><br>
+                Adresa ta IP înregistrată de server este: <span style="color: red; font-weight: bold;"><%= locals.ip %></span>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../fragmente/footer') %>
+</body>
+</html>

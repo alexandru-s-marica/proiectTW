@@ -1,12 +1,30 @@
 {
   "name": "proiect",
   "version": "1.0.0",
-  "description": "",
+  "description": "Magazin online de piese și seturi LEGO",
+  "keywords": [
+    "lego",
+    "magazin",
+    "seturi",
+    "tw"
+  ],
+  "homepage": "https://github.com/alexandru-s-marica/proiectTW#readme",
+  "bugs": {
+    "url": "https://github.com/alexandru-s-marica/proiectTW/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandru-s-marica/proiectTW.git"
+  },
   "license": "ISC",
-  "author": "",
+  "author": "Marica Alexandru-Stefan",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1"
   }
 }

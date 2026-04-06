@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <%- include('../fragmente/head') %>
+        <title>Magazin LEGO</title>
+</head>
+
+<body id="top">
+    <div id="watermark-print">
+        Marica<br>Alexandru-Stefan
+    </div>
+
+    <%- include('../fragmente/header') %>
+
+        <main>
+            <div id="grid-pagina">
+
+                <section id="welcome">
+                    <hgroup>
+                        <h2>Bine ati venit</h2>
+                        <p class="subtitlu">Prezentarea magazinului</p>
+                    </hgroup>
+
+                    <p class="intro">Vă mulțumim că vizitați acest <b>magazin LEGO</b>. Aici găsiți cele mai noi
+                        <b>seturi
+                            LEGO</b>. Spor la construit!
+                    </p>
+
+                    <div class="intro-oferte">
+                        <div>Star Wars</div>
+                        <div>Ninjago</div>
+                        <div>City</div>
+                        <div>Technic</div>
+                        <div>Creator</div>
+                    </div>
+                    <p class="anunt intro">Puteți comanda <b>piese LEGO</b> la bucată direct la domiciliu, prin
+                        intermediul
+                        ofertei noastre de livrare.</p>
+
+                    <h3>Descoperă magazinul (Hartă Interactivă)</h3>
+                    <p>Dă click pe diversele forme din imagine pentru a naviga rapid:</p>
+
+                    <img src="/resurse/imagini/harta-magazin.jpg" usemap="#navigare-vizuala"
+                        alt="Navigare vizuală magazin" width="500" height="250">
+
+                    <map name="navigare-vizuala">
+                        <area shape="rect" coords="10,10,160,240" href="#promotii" alt="Promoții"
+                            title="Mergi la secțiunea Promoții">
+                        <area shape="circle" coords="250,125,100" href="#produse" alt="Gama de Produse"
+                            title="Mergi la Produse">
+                        <area shape="poly" coords="360,10,490,10,450,240,390,240" href="#faq" alt="Întrebări Frecvente"
+                            title="Mergi la Întrebări frecvente">
+                    </map>
+
+                    <div id="dv-prezentare-1">
+                        <div id="dv-prezentare">
+                            <figure id="fig-prezentare-lego">
+                                <picture>
+                                    <source srcset="/resurse/imagini/lego-set-mic.jpg" media="(max-width: 600px)" />
+                                    <source srcset="/resurse/imagini/lego-set-mediu.jpg" media="(max-width: 1024px)" />
+                                    <img src="/resurse/imagini/lego-set-mare.jpg" alt="Set LEGO City"
+                                        title="Set detaliat LEGO City cu secție de poliție" />
+                                </picture>
+                                <figcaption>Cel mai căutat set din luna aceasta, perfect pentru constructorii pasionați.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <hr class="prajituri" />
+                    <div id="container-video">
+                        <img style="width:50%" class="farfurie" src="/resurse/imagini/farfurie-flori-albastre.png"
+                            alt="farfurie" title="O farfurie cu flori">
+                        <div id="centrare-video">
+                            <div id="clip-video">
+                                <div id="stil-video">
+                                    <video controls preload="metadata" poster="/resurse/imagini/harta-magazin.jpg">
+                                        <source src="/resurse/video/lego.mp4" type="video/mp4">
+                                        <source src="/resurse/video/lego.webm" type="video/webm">
+
+                                        <track default src="/resurse/video/mesaje-ro.vtt" kind="captions" srclang="ro"
+                                            label="Romana">
+
+                                        <track src="/resurse/video/mesaje-en.vtt" kind="captions" srclang="en"
+                                            label="Engleza">
+
+                                        <p>Browserul dumneavoastra nu suporta formatul video.</p>
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="orar">
+                    <h2>Orar magazin</h2>
+                    <div class="container-tabel">
+                        <table id="tab-orar">
+                            <caption>Programul de funcționare și livrări al magazinului LEGO</caption>
+
+                            <thead>
+                                <tr>
+                                    <th>Perioadă</th>
+                                    <th>Ziua</th>
+                                    <th>Deschidere</th>
+                                    <th>Pauză tehnică</th>
+                                    <th>Închidere</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td rowspan="5">Zile<br />Lucrătoare</td>
+                                    <td>Luni</td>
+                                    <td>10:00</td>
+                                    <td>13:00 - 13:30</td>
+                                    <td>20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Marți</td>
+                                    <td>10:00</td>
+                                    <td>13:00 - 13:30</td>
+                                    <td>20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Miercuri</td>
+                                    <td>10:00</td>
+                                    <td>13:00 - 13:30</td>
+                                    <td>20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Joi</td>
+                                    <td>10:00</td>
+                                    <td>13:00 - 13:30</td>
+                                    <td>20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Vineri</td>
+                                    <td>10:00</td>
+                                    <td>13:00 - 13:30</td>
+                                    <td>21:00</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Weekend</td>
+                                    <td>Sâmbătă</td>
+                                    <td>09:00</td>
+                                    <td>-</td>
+                                    <td>18:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Duminică</td>
+                                    <td>10:00</td>
+                                    <td>-</td>
+                                    <td>14:00</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5">Închis în prima zi a lunii pentru inventarul pieselor și de
+                                        sărbătorile
+                                        legale.</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <p><strong>Atenție!</strong> Seturile conțin piese mici. Pericol de sufocare pentru copiii sub 3
+                        ani!
+                    </p>
+                </section>
+
+                <section id="calendar">
+                    <h2>Calendar Evenimente</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </section>
+
+                <section id="anunturi">
+                    <h2>Anunțuri</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </section>
+
+                <section id="utilizatori">
+                    <h2>Utilizatori Online</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 15 pasionati online.</p>
+                    <p style="margin-top: 10px; font-weight: bold; color: var(--culoare-accent);">IP-ul tau: <%=
+                            locals.ip %>
+                    </p>
+                </section>
+
+                <section id="statistici">
+                    <h2>Statistici Utilizator</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </section>
+
+                <section id="server">
+                    <h2>Informații Server</h2>
+                    <p>Lorem ipsum dolor sit amet. Server status: Online.</p>
+                </section>
+
+                <div id="zona-diverse">
+
+                    <section id="promotii">
+                        <h2>Promoții și oferte la seturi</h2>
+                        <article>
+                            <h3 class="titlu">Super ofertă de weekend</h3>
+                            <p>Acest magazin oferă reduceri de <s>10%</s> <ins>15%</ins> pentru toate seturile cumpărate
+                                fizic.</p>
+                        </article>
+                        <article>
+                            <h3>Ofertă pachet</h3>
+                            <p>Cofetăria Dulcelind oferă pachete cuprinzând:</p>
+                            <ol>
+                                <li><i lang="en">icecream</i></li>
+                                <li>Un set de 4 pateuri de sortimente diferite</li>
+                                <li>O prajitură la alegere</li>
+                                <li>Un <i>suc</i></li>
+                                <li>Gratis: o farfurioară ornata cu inițiala cofetăriei</li>
+                                <li>Gratis: o felicitare cu imaginea cofetăriei</li>
+                                <li>Gratis: un pui de pisică. </li>
+                            </ol>
+                        </article>
+                        <article>
+                            <h3>Prajituri de Halloween</h3>
+                            <p>Noi punem suflet în prăjiturile noastre!... Literalmente!</p>
+                            <ol>
+                                <li>Când vreți să gustați o prajitura, aceasta țipă.</li>
+                                <li>Când puneți mai multe prăjituri pe platou, vor conspira.</li>
+                                <li>Nu încercați să mușcați vreun fursec de Halloween.</li>
+                            </ol>
+                        </article>
+                        <article>
+                            <h3>Cum calculăm reducerea?</h3>
+                            <p>Pentru transparență, iată formula matematică:</p>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                <mrow>
+                                    <msub>
+                                        <mi>P</mi>
+                                        <mrow>
+                                            <mi>f</mi>
+                                            <mi>i</mi>
+                                            <mi>n</mi>
+                                            <mi>a</mi>
+                                            <mi>l</mi>
+                                        </mrow>
+                                    </msub>
+                                    <mo>=</mo>
+                                    <msub>
+                                        <mi>P</mi>
+                                        <mrow>
+                                            <mi>i</mi>
+                                            <mi>n</mi>
+                                            <mi>i</mi>
+                                            <mi>t</mi>
+                                            <mi>i</mi>
+                                            <mi>a</mi>
+                                            <mi>l</mi>
+                                        </mrow>
+                                    </msub>
+                                    <mo>×</mo>
+                                    <mrow>
+                                        <mo>(</mo>
+                                        <mn>1</mn>
+                                        <mo>-</mo>
+                                        <mfrac>
+                                            <mi>reducere</mi>
+                                            <mn>100</mn>
+                                        </mfrac>
+                                        <mo>)</mo>
+                                    </mrow>
+                                </mrow>
+                            </math>
+                        </article>
+                    </section>
+
+                    <section id="produse">
+                        <h2><i class="fa-solid fa-cubes"></i> Produsele noastre: Piese și Seturi LEGO</h2>
+                        <section>
+                            <h3>Piese la kilogram</h3>
+                            <ul>
+                                <li>cărămizi clasice</li>
+                                <li>plăci de bază</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3>Seturi de colectie</h3>
+                            <ul>
+                                <li>Star Wars Millennium Falcon</li>
+                                <li>Ninjago City Gardens</li>
+                            </ul>
+                        </section>
+                    </section>
+
+                    <section id="despre-lego">
+                        <h2>Cultura LEGO</h2>
+                        <p>Suntem mândri să găzduim întâlniri lunare pentru comunitatea <abbr
+                                title="Adult Fan of LEGO">AFOL</abbr> din oraș.</p>
+                        <blockquote>
+                            <p>Doar ce este mai bun este suficient de bun.</p>
+                            <cite>- Ole Kirk Christiansen, fondatorul companiei</cite>
+                        </blockquote>
+                        <h3>Dicționarul constructorului</h3>
+                        <dl>
+                            <dt>AFOL</dt>
+                            <dd>Adult Fan of LEGO (Fan adult).</dd>
+                            <dt>MOC</dt>
+                            <dd>My Own Creation (Propria mea creație).</dd>
+                        </dl>
+                    </section>
+
+                    <figure id="fig1" class="fg-img"><img src="/resurse/imagini/briose-frisca.png" alt="briose">
+                        <figcaption>Briose 1</figcaption>
+                    </figure>
+                    <figure id="fig2" class="fg-img"><img src="/resurse/imagini/briose-frisca.png" alt="briose">
+                        <figcaption>Briose 2</figcaption>
+                    </figure>
+                    <figure id="fig3" class="fg-img"><img src="/resurse/imagini/briose-frisca.png" alt="briose">
+                        <figcaption>Briose 3</figcaption>
+                    </figure>
+                    <figure id="fig4"><img src="/resurse/imagini/briose-frisca.png" alt="briose">
+                        <figcaption>Briose 3</figcaption>
+                    </figure>
+
+                    <section id="evenimente">
+                        <h2>Evenimente în magazin</h2>
+                        <ul>
+                            <li><time datetime="2026-04-15T12:00">15 aprilie, ora 12:00</time> - <b>Concurs</b></li>
+                            <li><time datetime="2026-05-01T10:00">1 mai, ora 10:00</time> - <b>Lansare Star Wars</b>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="faq">
+                        <h2>Întrebări frecvente</h2>
+                        <details>
+                            <summary>Vindeți piese de schimb la bucată?</summary>
+                            <p>Da! Avem un perete special "Pick-A-Brick".</p>
+                        </details>
+                        <details>
+                            <summary>Care este politica de retur pentru seturi?</summary>
+                            <p>Seturile pot fi returnate în termen de 30 de zile.</p>
+                        </details>
+                    </section>
+
+                    <section id="galerie-statica">
+                        <h2>Galerie</h2>
+                        <div id="grid-galerie">
+                            <figure><img src="/resurse/imagini/briose-frisca.png" alt="briose">
+                                <figcaption>Briose</figcaption>
+                            </figure>
+                            <figure><img src="/resurse/imagini/briose-frisca.png" alt="briose">
+                                <figcaption>Briose</figcaption>
+                            </figure>
+                            <figure><img src="/resurse/imagini/briose-frisca.png" alt="briose">
+                                <figcaption>Briose</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <section id="video-constructii">
+                        <h2><i class="fa-solid fa-gear fa-spin"></i> Tutoriale de construcție</h2>
+                        <div class="container-iframe">
+                            <div class="taburi-iframe">
+                                <a href="https://www.youtube.com/embed/WouqeLJ4EuM" target="ifr-video">Construcție 1</a>
+                                <a href="https://www.youtube.com/embed/ReWSULH-EQo" target="ifr-video">Construcție 2</a>
+                            </div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WouqeLJ4EuM"
+                                name="ifr-video" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </section>
+
+                    <section id="playlist-automat">
+                        <h2>Maraton de construcții (Playlist automat)</h2>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/videoseries?list=PLCgkBxj8_VdpyNV-8m7yhqSU_3Y7y233t&autoplay=1&mute=1&loop=1&controls=1"
+                            title="YouTube video playlist" frameborder="0" allowfullscreen></iframe>
+                    </section>
+
+                    <section id="statistici-magazin">
+                        <h2>Statistici și disponibilitate</h2>
+                        <p>Stoc disponibil: <meter min="0" max="50" low="10" high="40" optimum="45" value="5">5 din 50
+                                bucăți</meter></p>
+                    </section>
+
+                    <section id="resurse-utile">
+                        <h2>Resurse și Linkuri Utile</h2>
+                        <p>Pentru mai multe detalii, <a href="https://www.lego.com/ro-ro" target="_blank">vizitați
+                                site-ul
+                                oficial LEGO</a>.</p>
+                        <object data="/resurse/documente/catalog-baza.pdf" type="application/pdf"
+                            style="width: 100%; height: 500px;">
+                            <p>Browserul nu suportă afișarea. <a href="/resurse/documente/catalog-baza.pdf"
+                                    download="Catalog_Magazin_LEGO_2026.pdf">Descărcați fișierul</a>.</p>
+                        </object>
+                    </section>
+
+                </div>
+
+            </div>
+        </main>
+
+        <%- include('../fragmente/footer') %>
+
+</body>
+
+</html>
