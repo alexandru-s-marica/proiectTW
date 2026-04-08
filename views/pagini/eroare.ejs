@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <%- include('../fragmente/head') %>
+    <title>Eroare <%= locals.titlu %></title>
+</head>
+<body id="top">
+    <%- include('../fragmente/header') %>
+    
+    <main>
+        <section style="text-align: center; padding: 100px 20px;">
+            <h2><i class="fa-solid fa-triangle-exclamation"></i> <%= locals.titlu %></h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;"><%= locals.text %></p>
+            <img src="<%= locals.imagine %>" alt="Imagine eroare" style="max-width: 400px; border-radius: 10px;">
+        </section>
+    </main>
+
+    <%- include('../fragmente/footer') %>
+</body>
+</html>
